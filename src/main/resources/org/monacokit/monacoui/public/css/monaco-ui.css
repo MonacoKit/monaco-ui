@@ -1,7 +1,15 @@
+/* Import default fonts and icons */
+@import url(../fonts/AlibabaPuHuiTi/AlibabaPuHuiTi-3-55-Regular.css);
+@import url(../fonts/MaterialDesignIcons/materialdesignicons.css);
+
+/* Global font setting */
+* {
+  font-family: "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "AlibabaPuHuiTi-3-55-Regular", Tahoma, Consolas, Arial, "Microsoft YaHei", "微软雅黑", "sans-serif" !important;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "AlibabaPuHuiTi-3-55-Regular", Tahoma, Consolas, Arial, "Microsoft YaHei", "微软雅黑", "sans-serif" !important;
 }
 
 /* Disable user select text */

@@ -1,4 +1,4 @@
-package org.monacokit.ui.shared;
+package shared;
 
 import elemental2.dom.Element;
 

@@ -1,4 +1,4 @@
-package org.monacokit.ui.shared.utils;
+package shared.utils;
 
 import static java.util.Objects.isNull;
 
