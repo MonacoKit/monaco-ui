@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.monacokit</groupId>
+        <artifactId>monaco-ui-parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>monaco-ui-samples</artifactId>
+    <packaging>gwt-app</packaging>
+
+    <build>
+        <plugins>
+            <!-- Maven Plugin For GWT -->
+            <plugin>
+                <groupId>net.ltgt.gwt.maven</groupId>
+                <artifactId>gwt-maven-plugin</artifactId>
+                <extensions>true</extensions>
+                <inherited>false</inherited>
+                <configuration>
+                    <moduleName/>
+                    <workDir>${basedir}/target/gwt/workDir</workDir>
+                    <launcherDir>${basedir}/target/gwt/launcherDir</launcherDir>
+                    <sourceLevel>${maven.compiler.source}</sourceLevel>
+                    <failOnError>true</failOnError>
+                    <optimize>9</optimize>
+                    <jvmArgs>
+                        <arg>-Xms512m</arg>
+                        <arg>-Xmx4096m</arg>
+                        <jvmArg>-XX:CompileThreshold=7000</jvmArg>
+                    </jvmArgs>
+                    <compilerArgs>
+                        <arg>-gen</arg>
+                        <arg>${basedir}/target/gwt/gen</arg>
+                        <arg>-logLevel</arg>
+                        <arg>INFO</arg>
+                        <arg>-style</arg>
+                        <arg>PRETTY</arg>
+                        <!-- <arg>OBFUSCATED</arg> -->
+                        <arg>-generateJsInteropExports</arg>
+                        <!-- <arg>-incremental</arg> -->
+                    </compilerArgs>
+                    <codeserverArgs>
+                        <arg>-port</arg>
+                        <arg>6789</arg>
+                    </codeserverArgs>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

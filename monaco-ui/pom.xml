@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.monacokit</groupId>
+        <artifactId>monaco-ui-parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>monaco-ui</artifactId>
+    <packaging>gwt-lib</packaging>
+
+    <dependencies>
+        <!-- Elemental2 -->
+        <dependency>
+            <groupId>com.google.elemental2</groupId>
+            <artifactId>elemental2-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.elemental2</groupId>
+            <artifactId>elemental2-dom</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.elemental2</groupId>
+            <artifactId>elemental2-promise</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.elemental2</groupId>
+            <artifactId>elemental2-svg</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.elemental2</groupId>
+            <artifactId>elemental2-webgl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.elemental2</groupId>
+            <artifactId>elemental2-media</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.elemental2</groupId>
+            <artifactId>elemental2-webstorage</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.elemental2</groupId>
+            <artifactId>elemental2-indexeddb</artifactId>
+        </dependency>
+
+        <!-- Elemento -->
+        <dependency>
+            <groupId>org.jboss.elemento</groupId>
+            <artifactId>elemento-core</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Maven Plugin For GWT -->
+            <plugin>
+                <groupId>net.ltgt.gwt.maven</groupId>
+                <artifactId>gwt-maven-plugin</artifactId>
+                <extensions>true</extensions>
+                <inherited>false</inherited>
+                <configuration>
+                    <sourceLevel>${maven.compiler.source}</sourceLevel>
+                    <workDir>${basedir}/target/gwt/workDir</workDir>
+                    <launcherDir>${basedir}/target/gwt/launcherDir</launcherDir>
+                    <failOnError>true</failOnError>
+                    <optimize>9</optimize>
+                    <jvmArgs>
+                        <arg>-Xms512m</arg>
+                        <arg>-Xmx4096m</arg>
+                    </jvmArgs>
+                    <compilerArgs>
+                        <arg>-gen</arg>
+                        <arg>${basedir}/target/gwt/gen</arg>
+                        <arg>-logLevel</arg>
+                        <arg>INFO</arg>
+                        <arg>-style</arg>
+                        <arg>PRETTY</arg>
+                        <!-- <arg>OBFUSCATED</arg> -->
+                        <arg>-generateJsInteropExports</arg>
+                        <!-- <arg>-incremental</arg> -->
+                    </compilerArgs>
+                    <codeserverArgs>
+                        <arg>-port</arg>
+                        <arg>6789</arg>
+                    </codeserverArgs>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
