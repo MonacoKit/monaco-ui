@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    <!-- GWT stuffs -->
+    <inherits name="com.google.gwt.user.User"/>
+    <inherits name="com.google.gwt.precompress.Precompress"/>
+
+    <!-- Nalu stuffs -->
+    <!-- <inherits name="com.github.nalukit.nalu.Nalu"/> -->
+    <!-- <inherits name="com.github.nalukit.nalu.plugin.elemental2.NaluPluginElemental2"/> -->
+
+    <!-- Specify the app entry point class -->
+    <entry-point class="org.monacokit.monacoui.samples.AppEntryPoint"/>
+
+    <!-- Specify the paths for translatable code -->
+    <source path=""/>
+
+</module>

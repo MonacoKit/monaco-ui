@@ -17,6 +17,7 @@
         <gwt.version>2.10.0</gwt.version>
         <elemental2.version>1.2.1</elemental2.version>
         <elemento.version>1.1.4</elemento.version>
+        <slf4j-api.version>2.0.9</slf4j-api.version>
         <plexus-utils.version>3.0.24</plexus-utils.version>
         <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
         <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
@@ -88,6 +89,13 @@
                 <artifactId>elemento-core</artifactId>
                 <version>${elemento.version}</version>
             </dependency>
+
+            <!-- slf4j -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j-api.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -140,11 +148,10 @@
                     <artifactId>gwt-maven-plugin</artifactId>
                     <version>${gwt-maven-plugin.version}</version>
                     <extensions>true</extensions>
-                    <inherited>false</inherited>
                     <configuration>
                         <sourceLevel>${maven.compiler.source}</sourceLevel>
                         <workDir>${basedir}/target/gwt/workDir</workDir>
-                        <launcherDir>${basedir}/target/gwt/launcherDir</launcherDir>
+                        <!-- <launcherDir>${basedir}/target/gwt/launcherDir</launcherDir> -->
                         <failOnError>true</failOnError>
                         <optimize>9</optimize>
                         <jvmArgs>
@@ -160,7 +167,7 @@
                             <arg>PRETTY</arg>
                             <!-- <arg>OBFUSCATED</arg> -->
                             <arg>-generateJsInteropExports</arg>
-                            <!-- <arg>-incremental</arg> -->
+                            <arg>-incremental</arg>
                         </compilerArgs>
                         <codeserverArgs>
                             <arg>-port</arg>
