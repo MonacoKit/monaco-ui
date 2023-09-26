@@ -11,7 +11,6 @@
     </parent>
 
     <artifactId>monaco-ui</artifactId>
-    <packaging>gwt-lib</packaging>
 
     <dependencies>
         <!-- Elemental2 -->
@@ -57,38 +56,10 @@
 
     <build>
         <plugins>
-            <!-- Maven Plugin For GWT -->
+            <!-- Apache Maven Source Plugin -->
             <plugin>
-                <groupId>net.ltgt.gwt.maven</groupId>
-                <artifactId>gwt-maven-plugin</artifactId>
-                <extensions>true</extensions>
-                <inherited>false</inherited>
-                <configuration>
-                    <sourceLevel>${maven.compiler.source}</sourceLevel>
-                    <workDir>${basedir}/target/gwt/workDir</workDir>
-                    <launcherDir>${basedir}/target/gwt/launcherDir</launcherDir>
-                    <failOnError>true</failOnError>
-                    <optimize>9</optimize>
-                    <jvmArgs>
-                        <arg>-Xms512m</arg>
-                        <arg>-Xmx4096m</arg>
-                    </jvmArgs>
-                    <compilerArgs>
-                        <arg>-gen</arg>
-                        <arg>${basedir}/target/gwt/gen</arg>
-                        <arg>-logLevel</arg>
-                        <arg>INFO</arg>
-                        <arg>-style</arg>
-                        <arg>PRETTY</arg>
-                        <!-- <arg>OBFUSCATED</arg> -->
-                        <arg>-generateJsInteropExports</arg>
-                        <!-- <arg>-incremental</arg> -->
-                    </compilerArgs>
-                    <codeserverArgs>
-                        <arg>-port</arg>
-                        <arg>6789</arg>
-                    </codeserverArgs>
-                </configuration>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
