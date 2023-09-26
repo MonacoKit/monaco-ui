@@ -11,6 +11,7 @@
     </parent>
 
     <artifactId>monaco-ui</artifactId>
+    <packaging>gwt-lib</packaging>
 
     <dependencies>
         <!-- Elemental2 -->
@@ -60,6 +61,15 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
+            </plugin>
+
+            <!-- Maven Plugin For GWT -->
+            <plugin>
+                <groupId>net.ltgt.gwt.maven</groupId>
+                <artifactId>gwt-maven-plugin</artifactId>
+                <configuration>
+                    <moduleName>org.monacokit.monacoui.MonacoUI</moduleName>
+                </configuration>
             </plugin>
         </plugins>
     </build>

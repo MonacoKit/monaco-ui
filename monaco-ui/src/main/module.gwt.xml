@@ -19,16 +19,7 @@
     <!-- Elemento stuffs -->
     <inherits name="org.jboss.elemento.Core"/>
 
-    <!-- Specify the app entry point class -->
-    <!-- <entry-point class="org.monacokit.monacoui.AppEntryPoint"/> -->
-
     <!-- Specify the paths for translatable code -->
     <source path=""/>
-    <!-- or Use the following method, Specify the source root directory for each module -->
-    <!--
-    <source path="base"/>
-    <source path="ui"/>
-    <source path="utils"/>
-    -->
 
 </module>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <link rel="shortcut icon" type="image/x-icon" href="#">
+
+    <!--                                                               -->
+    <!-- Consider inlining CSS to reduce the number of requested files -->
+    <!--                                                               -->
+    <link type="text/css" rel="stylesheet" href="samples/css/monaco-ui.css">
+
+    <!--                                           -->
+    <!-- Any title is fine                         -->
+    <!--                                           -->
+    <title></title>
+
+    <!--                                           -->
+    <!-- This script loads your compiled module.   -->
+    <!-- If you add any GWT meta tags, they must   -->
+    <!-- be added before this line.                -->
+    <!--                                           -->
+    <script type="text/javascript" language="javascript" src="samples/samples.nocache.js" async=""></script>
+
+    <style>
+        .bouncingBear {
+            margin: 100px auto 0;
+            width: 70px;
+            text-align: center;
+        }
+
+        .bouncingBear > div {
+            width: 18px;
+            height: 18px;
+            background-color: GREY;
+            border-radius: 100%;
+            display: inline-block;
+            -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+            animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+        }
+
+        .bouncingBear .bear1 {
+            -webkit-animation-delay: -0.32s;
+            animation-delay: -0.32s;
+        }
+
+        .bouncingBear .bear2 {
+            -webkit-animation-delay: -0.16s;
+            animation-delay: -0.16s;
+        }
+
+        @-webkit-keyframes sk-bouncedelay {
+            0%, 80%, 100% {
+                -webkit-transform: scale(0)
+            }
+            40% {
+                -webkit-transform: scale(1.0)
+            }
+        }
+
+        @keyframes sk-bouncedelay {
+            0%, 80%, 100% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+            40% {
+                -webkit-transform: scale(1.0);
+                transform: scale(1.0);
+            }
+        }
+
+        #LoadingSpinner {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            /* bring your own prefixes */
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<!--                                           -->
+<!-- The body can have arbitrary html, or      -->
+<!-- you can leave the body empty if you want  -->
+<!-- to create a completely dynamic UI.        -->
+<!--                                           -->
+<body>
+<!-- OPTIONAL: include this if you want history support -->
+<iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1'
+        style="position: absolute; width: 0; height: 0; border: 0"></iframe>
+
+<!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
+<noscript>
+    <div
+        style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+        Your web browser must have JavaScript enabled
+        in order for this application to display correctly.
+    </div>
+</noscript>
+
+<div id="LoadingSpinner">
+    <div class="bouncingBear">
+        <div class="bear1"></div>
+        <div class="bear2"></div>
+        <div class="bear3"></div>
+    </div>
+</div>
+
+</body>
+</html>

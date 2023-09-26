@@ -15,14 +15,14 @@ import org.slf4j.LoggerFactory;
  */
 public class AppEntryPoint implements EntryPoint {
 
-    private static final Logger logger = LoggerFactory.getLogger(AppEntryPoint.class);
+    // private static final Logger logger = LoggerFactory.getLogger(AppEntryPoint.class);
 
     /**
      * This is the entry point method.
      */
     public void onModuleLoad() {
         // Initialize uncaught exception handler
-        GWT.setUncaughtExceptionHandler(e -> logger.error("PANIC! -> UncaughtException Handler called", e));
+        // GWT.setUncaughtExceptionHandler(e -> logger.error("PANIC! -> UncaughtException Handler called", e));
 
         // Create and start the application
         // DataPlusApplication application = new DataPlusApplicationImpl();
@@ -34,6 +34,6 @@ public class AppEntryPoint implements EntryPoint {
             element.remove();
         }
 
-        logger.info("DataPlus UI have been initialized.");
+        // logger.info("DataPlus UI have been initialized.");
     }
 }

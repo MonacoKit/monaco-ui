@@ -8,6 +8,9 @@
     <!-- <inherits name="com.github.nalukit.nalu.Nalu"/> -->
     <!-- <inherits name="com.github.nalukit.nalu.plugin.elemental2.NaluPluginElemental2"/> -->
 
+    <!-- MonacoUI stuffs -->
+    <inherits name="org.monacokit.monacoui.MonacoUI"/>
+
     <!-- Specify the app entry point class -->
     <entry-point class="org.monacokit.monacoui.samples.AppEntryPoint"/>
 
