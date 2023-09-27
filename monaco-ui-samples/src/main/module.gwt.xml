@@ -11,6 +11,10 @@
     <!-- MonacoUI stuffs -->
     <inherits name="org.monacokit.monacoui.MonacoUI"/>
 
+    <!-- https://www.slf4gwt.org -->
+    <inherits name="org.slf4gwt.logging.gwt.Logging"/>
+    <set-property name="slf4gwt.log.level" value="INFO"/>
+
     <!-- Specify the app entry point class -->
     <entry-point class="org.monacokit.monacoui.samples.AppEntryPoint"/>
 

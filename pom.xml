@@ -17,6 +17,7 @@
         <gwt.version>2.10.0</gwt.version>
         <elemental2.version>1.2.1</elemental2.version>
         <elemento.version>1.2.0</elemento.version>
+        <slf4gwt.version>1.4</slf4gwt.version>
         <slf4j-api.version>2.0.9</slf4j-api.version>
         <plexus-utils.version>3.0.24</plexus-utils.version>
         <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
@@ -91,6 +92,11 @@
             </dependency>
 
             <!-- slf4j -->
+            <dependency>
+                <groupId>org.slf4gwt</groupId>
+                <artifactId>slf4gwt</artifactId>
+                <version>${slf4gwt.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
