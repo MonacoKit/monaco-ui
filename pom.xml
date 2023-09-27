@@ -173,7 +173,6 @@
                             <arg>PRETTY</arg>
                             <!-- <arg>OBFUSCATED</arg> -->
                             <arg>-generateJsInteropExports</arg>
-                            <arg>-incremental</arg>
                         </compilerArgs>
                         <codeserverArgs>
                             <arg>-port</arg>
