@@ -157,7 +157,6 @@
                     <configuration>
                         <sourceLevel>${maven.compiler.source}</sourceLevel>
                         <workDir>${basedir}/target/gwt/workDir</workDir>
-                        <!-- <launcherDir>${basedir}/target/gwt/launcherDir</launcherDir> -->
                         <failOnError>true</failOnError>
                         <optimize>9</optimize>
                         <jvmArgs>
@@ -171,7 +170,6 @@
                             <arg>INFO</arg>
                             <arg>-style</arg>
                             <arg>PRETTY</arg>
-                            <!-- <arg>OBFUSCATED</arg> -->
                             <arg>-generateJsInteropExports</arg>
                         </compilerArgs>
                         <codeserverArgs>
