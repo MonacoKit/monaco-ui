@@ -113,7 +113,7 @@
                 <artifactId>gwt-maven-plugin</artifactId>
                 <inherited>false</inherited>
                 <configuration>
-                    <launcherDir>${basedir}/target/gwt/launcherDir</launcherDir>
+                    <launcherDir>${basedir}/monaco-ui-samples/target/monaco-ui-samples</launcherDir>
                 </configuration>
             </plugin>
         </plugins>
