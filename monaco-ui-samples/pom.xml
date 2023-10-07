@@ -58,7 +58,7 @@
 
     <!-- 环境配置 -->
     <profiles>
-        <!-- package -->
+        <!-- Production environment, Only used when build packaging -->
         <profile>
             <id>env-prod</id>
             <activation>

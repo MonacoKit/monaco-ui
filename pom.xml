@@ -191,7 +191,7 @@
 
     <!-- 环境配置 -->
     <profiles>
-        <!-- prod -->
+        <!-- Production environment, Only used when build packaging -->
         <profile>
             <id>env-prod</id>
             <activation>
@@ -203,7 +203,7 @@
             </activation>
         </profile>
 
-        <!-- dev -->
+        <!-- Development environment, Used for local development -->
         <profile>
             <id>env-dev</id>
             <activation>
