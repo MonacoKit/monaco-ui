@@ -1,9 +1,9 @@
-package shared;
+package org.monacokit.monacoui;
 
 import elemental2.dom.Element;
 
 /**
- * IsElement
+ * IsElement interface
  *
  * @author fushuwei
  */

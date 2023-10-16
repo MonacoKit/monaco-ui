@@ -4,6 +4,8 @@ import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import elemental2.dom.DomGlobal;
 import elemental2.dom.Element;
+import elemental2.dom.HTMLBodyElement;
+import org.jboss.elemento.Elements;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,6 +30,10 @@ public class AppEntryPoint implements EntryPoint {
         if (element != null) {
             element.remove();
         }
+
+        HTMLBodyElement body = DomGlobal.document.body;
+        body.appendChild(Elements.h(1, "GWT Ultimate Material Design (abbreviated to gwt-ultimaterial、ultimaterial-ui or umd4gwt ...)").element());
+        body.appendChild(Elements.label("Showcase:").element());
 
         logger.info("Monaco UI samples have been initialized.");
     }
