@@ -1,1 +1,2 @@
-monaco-ui/**/*.css linguist-language=Markdown
+# monaco-ui/**/*.css linguist-language=Markdown
+monaco-ui/**/*.css linguist-vendored
